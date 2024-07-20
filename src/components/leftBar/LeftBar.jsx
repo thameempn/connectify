@@ -4,26 +4,27 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import StoreIcon from "@mui/icons-material/Store";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TimerIcon from "@mui/icons-material/Timer";
-import EventIcon from '@mui/icons-material/Event';
-import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
-import CollectionsIcon from '@mui/icons-material/Collections';
-import VideocamIcon from '@mui/icons-material/Videocam';
-import MessageIcon from '@mui/icons-material/Message';
-import PaidIcon from '@mui/icons-material/Paid';
-import SchoolIcon from '@mui/icons-material/School';
-import LightbulbCircleIcon from '@mui/icons-material/LightbulbCircle';
+import EventIcon from "@mui/icons-material/Event";
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import CollectionsIcon from "@mui/icons-material/Collections";
+import VideocamIcon from "@mui/icons-material/Videocam";
+import MessageIcon from "@mui/icons-material/Message";
+import PaidIcon from "@mui/icons-material/Paid";
+import SchoolIcon from "@mui/icons-material/School";
+import LightbulbCircleIcon from "@mui/icons-material/LightbulbCircle";
+import { useContext } from "react";
+import { AuthContext } from "../../context/authContext";
 
 function LeftBar() {
+  const { currentUser } = useContext(AuthContext);
+
   return (
     <div className="leftBar">
       <div className="container">
         <div className="menu">
           <div className="user">
-            <img
-              src="https://images.pexels.com/photos/5081918/pexels-photo-5081918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt=""
-            />
-            <span>John doe</span>
+            <img src={currentUser.profilePic} alt="" />
+            <span>{currentUser.name}</span>
           </div>
           <div className="item">
             <div className="icon">

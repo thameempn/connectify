@@ -10,7 +10,7 @@
     background-color: themed("bg");
     color: themed("textColor");
 
-    @include mobile{
+    @include mobile {
       display: none;
     }
 
@@ -59,8 +59,9 @@
           align-items: center;
           gap: 10px;
 
-          img {
+          .icon {
             width: 30px;
+            color: themed("icon");
           }
 
           span {
